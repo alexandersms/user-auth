@@ -4,6 +4,7 @@ const colors = require("colors");
 const morgan = require('morgan')("dev");
 const connectDB = require("./config/db");
 
+
 dotenv.config({path: "./config/config.env"});
 
 connectDB();
@@ -20,9 +21,11 @@ if (process.env.NODE_ENV === "development") {
 
 //Import Routes
 const authRoute = require('./routes/auth');
+const postRoute = require("./routes/posts")
 
 //Route Middleware
 app.use("/api/user", authRoute);
+app.use("/api/posts", postRoute)
 
 const PORT = process.env.PORT || 3500
 
