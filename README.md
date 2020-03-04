@@ -1,4 +1,4 @@
-# API Authrntification des utilisateurs
+# API Authentification des utilisateurs
 
 ## Application développée avec Node.js, Express.js, MongoDB
 
